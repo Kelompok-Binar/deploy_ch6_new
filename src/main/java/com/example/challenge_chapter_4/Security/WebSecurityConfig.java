@@ -34,7 +34,7 @@ public class WebSecurityConfig{
                 .disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/Film","/Jadwal","/Seats","/Studio",
-                        "/Film/Judul-Film/{film_name}","/Film/Tayang","/Film//Jadwal/{film_name}","/Seats/Studios/{studio}/{nomor_kursi}","/swagger-ui/**","/v3/api-docs/**").permitAll()
+                        "/Film/Judul-Film/{film_name}","/Film/Tayang","/Film//Jadwal/{film_name}","/Seats/Studios/{studio}/{nomor_kursi}","/swagger-ui/**","/v3/api-docs/**","https://immune-distance-production.up.railway.app/**").permitAll()
 //                .anyRequest().authenticated().and().httpBasic() formLogin()
                 .and().authorizeHttpRequests().requestMatchers("/Users/**","/Film/**","/Jadwal/**","/Report/**").authenticated().and().httpBasic().and().build();
     }
